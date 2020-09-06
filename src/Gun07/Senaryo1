@@ -1,0 +1,8 @@
+        1- https://www.saucedemo.com/  sitesini acin
+        2- login islemini yapiniz
+
+        username =   //input[@id='user-name']   =  standard_user
+        password =    //input[@id='password']          secret_sauce
+        Login buton =  //input[@id='login-button']
+
+        3- Burada gozuken urunlerin isimlerini yazdiriniz

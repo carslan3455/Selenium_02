@@ -1,0 +1,65 @@
+
+        1- https://www.saucedemo.com/  sitesini acin
+        2- login islemini yapiniz
+
+        username =   //input[@id='user-name']   =  standard_user
+        password =    //input[@id='password']          secret_sauce
+        Login buton =  //input[@id='login-button']
+
+        3- Sauce Labs Backpack  a tıklatın ve sepete ekletin.
+         buna tiklat //div[text()='Sauce Labs Backpack']
+         sonra add cart tiklat    //button[text()='ADD TO CART']
+                    Back tiklat   //button[text()='<- Back']
+        4- Sonra geri dönün
+        Back tiklat   //button[text()='<- Back']
+
+        sepete ekle
+        //div[@id='shopping_cart_container']
+        5- Sauce Labs Bolt T-Shirt  a tıklatın ve cart ekleyin ,geri gelin
+        //div[text()='Sauce Labs Bolt T-Shirt']
+
+        6- sepete tıklatın      //div[@id='shopping_cart_container']
+        7- CheckOut a tıklatın   //a[text()='CHECKOUT']    ---  //div[@id='cart_contents_container']/div/div[2]/a[2]
+                //div[@class='checkout_buttons']//following::input[1]
+        8- kullanıcı bilgilerini doldurup Continue ya tıklatın
+
+        firstname=   //input[@id='first-name']
+        lastname=    //input[@id='last-name']
+        Postalcode =    //input[@id='postal-code']
+
+        continue =  //input[@class='btn_primary cart_button']
+        //*[@id="checkout_info_container"]/div/form/div[2]/input
+
+        9- Burada her bir eşyanın ücretlerinin toplamının
+           aşağıdaki Item total e eşit olup olmadığını Assert ile test
+           ediniz.
+
+           1. fiyat =  (//div[@class='inventory_item_price'])[1]
+           //a[@id='item_4_title_link']/following-sibling::div[2]
+            //div[@id='checkout_summary_container']/div/div[1]/div[3]/div[2]/div[2]
+           2. fiyat  =  (//div[@class='inventory_item_price'])[2]
+           //div[@id='checkout_summary_container']/div/div[1]/div[4]/div[2]/div[2]
+
+            item total = //div[@class='summary_subtotal_label']
+            //div[@id='checkout_summary_container']/div/div[2]/div[5]
+
+
+
+
+
+//div[text()='Sauce Labs Backpack']/parent::*/parent::div -> /parent::*  bir üst e gider.parent e
+//div[text()='Sauce Labs Backpack']/../../..   -> aynı işlemi para üste gider /..  ile
+((//div[@id='inventory_container'])[1]/div/div)[2]   -> [2] den önceki kısımda bulunan elamanlardan 2.sini bulur
+(//div[@id='inventory_container'])[1]/div/div/following-sibling::div  -> /following-sibling::div kardeş div i bulur
+
+
+
+___Kendi Notum___
+***    //div[text()='Sauce Labs Backpack']/parent::*  verilen text ustundeki yere gider  ikiside ayni
+//div[text()='Sauce Labs Backpack']/..
+*** //div[text()='Sauce Labs Backpack']/parent::*/parent::*    texttin 2 ustune gider ikiside ayni
+	//div[text()='Sauce Labs Backpack']/../..
+***   (//div[@id='inventory_container'])[1]      ayni id ile olanin kacincisini almak istiyorsak onu bu sekilde yazabiliyoruz
+((//div[@id='inventory_container'])[1]/div/div)[2]
+
+
